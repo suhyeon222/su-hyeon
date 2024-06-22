@@ -1,3 +1,102 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 20px;
+    color: #3d3d3d;
+}
+
+a {
+    color: inherit;
+}
+
+.page {
+    width: 100%;
+    min-height: 180vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+}
+
+.page .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    text-transform: uppercase;
+    width: 100vw;
+    margin-top: 20vh;
+    height: 25vh;
+}
+
+.page .content {
+    max-width: 800px;
+    padding: 10px;
+}
+
+.page .last-line {
+    text-align: right;
+    padding-top: 1em;
+}
+
+.page ::-moz-selection {
+    background: #F7C02D;
+}
+
+.page ::selection {
+    background: #F7C02D;
+}
+
+.scroll-msg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+   padding-top: 2em;
+}
+
+.scroll-msg > div:nth-child(1) {
+    margin-top: -10vh;
+    padding-bottom: 1em;
+    text-transform: uppercase;
+    font-size: 2em;
+}
+
+canvas#fire-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    pointer-events: none;
+}
+
+.arrow-animated {
+    font-size: 1em;
+    animation: arrow-float 1s infinite;
+}
+
+@keyframes arrow-float {
+    0% {
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+    }
+    60% {
+        transform: translateY(50%);
+        animation-timing-function: ease-in-out;
+    }
+    100% {
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+    }
+}
 body {
     font-family: "Jua", sans-serif;
     font-weight: 400;
@@ -37,7 +136,7 @@ body {
 }
 
 .section {
-    height: 100vh;
+    height: 108vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -67,21 +166,33 @@ body {
 }
 
 #section4 {
-    background-image: url('img/IMG_0590.JPG');
+    background-image: url('img/bacjground4.png');
     background-size: cover;
     background-position: center;
 }
 
 #section5 {
-    background-image: url('img/background5.png');
+    background-image: url('img/backgroud5.png');
     background-size: cover;
     background-position: center;
 }
 
 #section6 {
-    background-image: url('img/IMG_0588.JPG');
+    background-image: url('img/background6.png');
     background-size: cover;
     background-position: center;
+}
+
+.overlay-box1 {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%; /* Ensure it spans the full width */
+    height: 78%;
+    max-width: 800px;
+    position: absolute;
+    
 }
 
 .overlay-box {
@@ -91,11 +202,10 @@ body {
     text-align: center;
     width: 80%; /* Ensure it spans the full width */
     max-width: 800px;
-    height: 80vh auto; 
+    margin-top: 47px;
     position: absolute;
     
 }
-
 
 .content-box {
     padding: 20px;
@@ -111,7 +221,7 @@ body {
     justify-content: center;
 }
 .content-box p {
-    margin-bottom: -10px; /* 문단 간격을 줄이기 위해 margin-bottom 설정 */
+    margin-bottom: -40px; /* 문단 간격을 줄이기 위해 margin-bottom 설정 */
 }
 .menu-icon {
     cursor: pointer;
@@ -270,3 +380,170 @@ body {
     height: auto;
     border-radius: 10px;
 }
+
+/* 섹션 5 GIF 이미지 스타일링 */
+#section5 .gif-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* 이미지 사이의 간격 조정 */
+}
+
+#section5 .gif-img {
+    width: 150px; /* 이미지 너비 조정 */
+    height: auto; /* 높이는 자동으로 조정 */
+    cursor: pointer; /* 클릭 가능한 커서 표시 */
+    transition: transform 0.3s ease; /* 마우스 오버 시 확대 효과를 위한 트랜지션 */
+}
+
+#section5 .gif-img:hover {
+    transform: scale(1.1); /* 마우스 오버 시 확대 효과 */
+}
+
+h1 {
+    text-align: center;
+    margin: 3rem 0;
+  }
+  li {
+    list-style: none;
+  }
+  body {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  @import "normalize.css";
+
+  @font-face {
+    font-family: "Embed code";
+    src: url("https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swa") format("truetype");
+  }
+  
+  *,
+  *:after,
+  *:before {
+      box-sizing: border-box;
+  }
+  
+#section6 body {
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+      font-family:  "Geist Sans", "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif, system-ui;
+      font-weight: 80;
+  }
+  
+#section6 button {
+      height: 48px;
+      padding: 0;
+      display: grid;
+      border-radius: 8px;
+      border: 2px solid black;
+      letter-spacing: 0.25px;
+      cursor: pointer;
+      position: relative;
+      background: black;
+      color: white;
+      font-weight: 80;
+      scale: 2;
+    outline-color: hsl(44, 100%, 57%);
+    outline-offset: 0.25rem;
+  }
+  
+#section6 button:is(:hover, :focus-visible) {
+      --active: 1;
+  }
+  
+#section6 button:active {
+    --pressed: 1;
+  }
+  
+#section6 button > span:nth-of-type(1) {
+      height: 100%;
+      width: 100%;
+      border-radius: 8px;
+      position: absolute;
+      inset: 0;
+    scale: calc(1 - (var(--pressed, 0) * 0.05));
+    transition: scale 0.1s;
+  }
+  
+#section6  button:is(:hover, :focus-visible) .container {
+      width: 100%;
+  }
+  
+#section6 .container {
+      --mask-image: url(https://assets.codepen.io/605876/chev-mask_1.png);
+      --spread: 24px;
+      --size: 28px;
+      width: 58px;
+      height: 100%;
+      background: hsl(44, 100%, 56%);
+      position: absolute;
+      left: 0;
+      transition: width 0.25s;
+      border-radius: 6px;
+      box-shadow: 0 10px 10px -5px hsl(0 0% 0% / 0.5);
+      container-type: inline-size;
+  }
+  
+#section6 .primary {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: hsl(0 0% 0% / 0.15);
+      z-index: 2;
+      mask: var(--mask-image) 50% 50% / var(--size) var(--size) no-repeat;
+      container-type: inline-size;
+  }
+  
+#section6:where(.primary, .complimentary)::after {
+      --distance: calc(100cqi + 100%);
+      content: "";
+      height: calc(var(--size) * 4);
+      aspect-ratio: 1;
+      position: absolute;
+      left: 0%;
+      top: 50%;
+      translate: -50% -50%;
+      background: radial-gradient(hsl(0 0% 0%), transparent);
+      animation: fly-by calc((2 - var(--active, 0)) * 1s) infinite linear;
+  }
+  
+  @keyframes fly-by {
+      0% { translate: -100% -50%; }
+      100% { translate: var(--distance) -50%; }
+  }
+  
+#section6 .complimentary {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: var(--active, 0);
+      transition: opacity 0.25s;
+      background: hsl(0 0% 0% / 0.15);
+      mask:
+          var(--mask-image) calc(50% - (var(--spread) * 1)) 50% / var(--size) var(--size) no-repeat,
+          var(--mask-image) calc(50% - (var(--spread) * 2)) 50% / var(--size) var(--size) no-repeat,
+          var(--mask-image) calc(50% - (var(--spread) * 3)) 50% / var(--size) var(--size) no-repeat,
+          var(--mask-image) calc(50% + (var(--spread) * 1)) 50% / var(--size) var(--size) no-repeat,
+          var(--mask-image) calc(50% + (var(--spread) * 2)) 50% / var(--size) var(--size) no-repeat,
+          var(--mask-image) calc(50% + (var(--spread) * 3)) 50% / var(--size) var(--size) no-repeat;
+  }
+  
+#section6 button > span:nth-of-type(2) {
+      padding: 0 1.1rem 0 calc(58px + 1.1rem);
+      display: grid;
+      place-items: center;
+      height: 100%;
+  }
+  
+
+
+
+
+
+
