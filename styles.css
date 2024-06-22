@@ -2,7 +2,7 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     color: #3d3d3d;
 }
 
@@ -147,6 +147,8 @@ body {
     font-size: 1.5em;
 }
 
+
+
 #section1 {
     background-image: url('img/background1.png');
     background-size: cover;
@@ -169,13 +171,17 @@ body {
     background-image: url('img/bacjground4.png');
     background-size: cover;
     background-position: center;
+    
 }
+
 
 #section5 {
     background-image: url('img/backgroud5.png');
     background-size: cover;
     background-position: center;
 }
+
+
 
 #section6 {
     background-image: url('img/background6.png');
@@ -541,7 +547,44 @@ h1 {
       height: 100%;
   }
   
-
+                <style>
+                  body {
+                    box-sizing: border-box;
+                    font-family: Consolas, monospace;
+                  }
+                  h1 {
+                    text-align: center;
+                  }
+                  img {
+                    max-width: 100%;
+                  }
+                  .jb-a {
+                    width: 400px;
+                    margin: 0px auto;
+                    position: relative
+                  }
+                  .jb-c {
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    opacity: 0;
+                    transition: opacity 0.5s linear;
+                    transform: scale(1); /* 기본 크기 */
+                    transform-origin: center center; /* 중심에서 커지게 설정 */
+                    margin: 70px auto;
+                    }
+                    .jb-a:hover .jb-c {
+                        opacity: 1;
+                        transform: scale(2); /* 확대 크기 */
+            
+                  }
+                  .jb-a:hover .jb-c {
+                    display: block;
+                    opacity: 1;
+                  }
+            
+            
+                </style>
 
 
 

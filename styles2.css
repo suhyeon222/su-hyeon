@@ -15,11 +15,50 @@ header {
   padding: 1em 0;
 }
 
+header h1 {
+  font-size: 2em; /* 적절한 크기로 조정 */
+  margin: 0;
+  padding: 10px;
+}
+
+
+.logo-link {
+  margin-right: 20px; /* 로고와 텍스트 사이의 간격 조정 */
+}
+
+.header-logo {
+  width: 80px; /* 로고 이미지 크기 조절 */
+  height: auto;
+}
+
+header h1 {
+  font-size: 1.5em; /* 헤더 제목 크기 조정 */
+  margin: 0;
+}
+
+
+.logo-link {
+  margin-right: 20px; /* 로고와 텍스트 사이의 간격 조정 */
+}
+
+.header-logo {
+  width: 50px; /* 로고 이미지 크기 조절 */
+  height: auto;
+}
+
+header h1 {
+  font-size: 1.5em; /* 헤더 제목 크기 조정 */
+  margin: 0;
+}
+px; /* 이미지와 텍스트 사이의 간격 */
+}
 .product-detail {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
 }
+
+
 
 .product-grid {
   display: grid;

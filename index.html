@@ -65,7 +65,7 @@
                         </div>
                     </div>
                     <div class="box" id="box3">
-                        <img src="img/춘식3.png" alt="이미지 설명">
+                        <img src="img/IMG_0377.WEBP" alt="이미지 설명">
                         <div>
                             <h1>춘식이의 얼굴</h1>
                             <p>춘식 얼굴에는 양쪽으로 귀여운 수염이 있다</p>
@@ -123,17 +123,15 @@
     <section id="section4" class="section">
         <div class="overlay-box">
             <div class="content-box">
-                <h1 class="title">춘식이의 TMI</h1>
-                <div class="photo-grid">
-                    <img src="img/춘식이 사진들.jpeg" alt="New Photo 1">
-                    <img src="img/춘식이 사진들.jpeg" alt="New Photo 2">
-                    <img src="img/춘식이 사진들.jpeg" alt="New Photo 3">
-                    <img src="img/춘식이 사진들.jpeg" alt="New Photo 4">
-                    <img src="img/춘식이 사진들.jpeg" alt="New Photo 5">
-                    <img src="img/춘식이 사진들.jpeg" alt="New Photo 6">
+                <meta charset="utf-8">
+              </head>
+              <body>
+                <h1>춘식이의 TMI</h1>
+                <div class="jb-a">
+                  <img src="img/what.png" alt="" class="jb-b">
+                  <img src="img/CUNSIKK TMII.png" alt="" class="jb-c">
                 </div>
-            </div>
-        </div>
+    </div>
 
     </section>
     <section id="section5" class="section">
@@ -165,16 +163,17 @@
     </section>
 
     <section id="section6" class="section">
-        <button>
+        <button onclick="goToGoodsPage('next_page.html')">
             <span>
-              <span class="container">
-                <span class="primary"></span>
-                <span class="complimentary"></span>
-              </span>
+                <span class="container">
+                    <span class="primary"></span>
+                    <span class="complimentary"></span>
+                </span>
             </span>
             <span>춘식이 굿즈 보러가기</span>
-          </button>
+        </button>
     </section>
+    
 
     <div class="menu-icon" onclick="toggleMenu()">메뉴</div>
     <div id="menu" class="menu-content">
@@ -183,8 +182,22 @@
         <a href="#section3">도도도 춘식이</a>
         <a href="#section4">춘식이 TMI</a>
         <a href="#section5">춘식이 이모티콘</a>
-        <a href="#section6">춘식이 굿즈 추천</a>
+        <a href="#section6">춘식이 굿즈</a>
     </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            menu.classList.toggle('show');
+        }
+    </script>
+
+    <script>
+            function goToGoodsPage() {
+        window.location.href = 'next_page.html'; // 이동할 페이지의 경로를 적어주세요.
+    }
+
+    </script>
 
     <script src="script.js"></script>
 </body>
